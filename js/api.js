@@ -17,7 +17,6 @@ function getData (input, page) {
     fetch(`https://www.omdbapi.com/?apikey=29b33c94&s=${input}&page=${page}`)
     .then(response => response.json())
     .then(data => {
-        console.log(data);
         if(page <= 1) {
             prevBtn.disabled = true;
         }
