@@ -1,0 +1,288 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: gilroy;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 90px 20px;
+}
+
+.header {
+    width: 100%;
+    background-color: #000000;
+    position: fixed;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 46px;
+    text-decoration: none;
+    margin: 0;
+}
+.filtr-box {
+    display: block;
+    width: 700px;
+    margin: 0 0;
+}
+
+.filtr__form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filtr__input,
+.genre-select,
+.sort-select {
+    padding: 0;
+    margin: 0;
+    padding: 6px 20px;
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(197, 197, 197);
+    font-size: 18px;
+}
+
+.film__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.film__item {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 10px;
+}
+
+.film__poster {
+    width: 100%;
+}
+
+.film__name {
+    width: 100%;
+    flex-grow: 1;
+}
+
+.film__description {
+    display: none;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.film__time {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.film__genre {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.film__btn,
+.saved-btn {
+    display: inline-block;
+    width: 100px;
+    padding: 0;
+    margin: 0;
+    padding: 8px 20px;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+
+.film__save-btn {
+    display: inline-block;
+    width: 100px;
+    padding: 0;
+    margin: 0;
+    padding: 7px 20px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    font-size: 18px;
+}
+
+.film__save-btn:hover {
+    padding: 7px 20px;
+    /* border: 2px solid rgb(9, 48, 80); */
+    color:white;
+    background-color: black;
+}
+
+.search-btn {
+    display: inline-block;
+    width: 100px;
+    padding: 0;
+    margin: 0;
+    padding: 8px 20px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.film__btn:hover,
+.saved-btn:hover {
+    padding: 6px 18px;
+    border: 2px solid rgb(9, 48, 80);
+    color:rgb(9, 48, 80);
+    background-color: white;
+}
+
+.search-btn:hover {
+    padding: 6px 18px;
+    border: 2px solid rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+.modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: relative;
+    z-index: 1;
+    max-width: 550px;
+    width: 100%;
+    padding: 20px 30px;
+    color: black;
+    background-color: white;
+}
+
+.modal-btn {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: 20px;
+}
+
+.bookmark-modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);;
+}
+
+.bookmark-content {
+    position: absolute;
+    z-index: 1;
+    max-width: 400px;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: white;
+    padding: 30px;
+}
+
+.bookmark-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.bookmark-item {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.bookmark-content h2 {
+    font-size: 36px;
+}
+
+.bookmark-item h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.saved-btn {
+    position: absolute;
+    top: 120px;
+    right: -90px;
+}
+
+.modal--open {
+    display: flex;
+}
+
+.p-buttons {
+    /* display: block; */
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pagination-btns {
+    padding: 12px 48px;
+    font-size: 18px;
+    background-color: #000000;
+    color: white;
+}
+
+.loader {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.error-text {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 50px;
+}

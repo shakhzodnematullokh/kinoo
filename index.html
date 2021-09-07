@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Kinoo</title>
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+	<header class="header">
+		<div class="container header-container">
+			<a href="index.html">
+				<p class="logo">kinoo</p>
+			</a>
+
+			<div class="filtr-box">
+				<form class="filtr__form js-form">
+					<input class="filtr__input js-input" type="text" />
+
+					<!-- <select class="genre-select">
+						<option value="All">All</option>
+					</select>
+
+					<select class="sort-select">
+						<option value="0">A-Z</option>
+						<option value="1">Z-A</option>
+						<option value="2">New-Old</option>
+						<option value="3">Old-New</option>
+					</select> -->
+
+					<button class="search-btn" type="submit">Search</button>
+				</form>
+			</div>
+
+			<button class="saved-btn">Saved</button>
+		</div>
+	</header>
+
+	<main>
+	<div class="container">
+		<div class="films">
+			<img class="loader" src="img/Pulse-1s-200px.gif" width="100" alt="">
+			<h3 class="error-text" style="display: none;">Kino topilmadi</h3>
+			<ul class="film__list"></ul>
+		</div>
+
+		<div class="p-buttons">
+			<button class="pagination-btns prev">Prev</button>
+			<button class="pagination-btns next">Next</button>
+		</div>
+	</div>
+
+	<div class="modal">
+		<div class="modal-content">
+			<h3 class="modal-name">Kino nomi</h3>
+			<p class="modal-text">Kino tarifi</p>
+			<button class="modal-btn">&times;</button>
+		</div>
+	</div>
+
+	<div class="bookmark-modal">
+		<div class="bookmark-content">
+			<h2>Saved movies</h2>
+			<ul class="bookmark-list">
+			</ul>
+		</div>
+	</div>
+	</main>
+
+	<template class="bookmark-template">
+		<li class="bookmark-item">
+			<h3 class="movie-name">Kino nomi</h3>
+			<button class="movie-remove-btn">remove</button>
+		</li>
+	</template>
+
+	<template id="film-template">
+	<li class="film__item">
+		<img width="250" class="film__poster"/>
+		<h3 class="film__name">
+			
+		</h3>
+		<p class="film__description">
+		</p>
+		<ul class="film__genre">
+		
+		</ul>
+		<span class="film__time">
+
+		</span>
+		<div class="buttons">
+			<button class="film__btn">More</button>
+			<button class="film__save-btn">Save</button>
+		</div>
+	</li>
+	</template>
+
+	<script src="js/api.js"></script>
+	<!-- <script src="js/films.js"></script>
+	<script src="js/index.js"></script> -->
+</body>
+</html>
