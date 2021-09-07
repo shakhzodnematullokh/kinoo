@@ -14,7 +14,7 @@ let page = 1;
 let input = "world";
 
 function getData (input, page) {
-    fetch(`http://www.omdbapi.com/?apikey=29b33c94&s=${input}&page=${page}`)
+    fetch(`https://www.omdbapi.com/?apikey=29b33c94&s=${input}&page=${page}`)
     .then(response => response.json())
     .then(data => {
         console.log(data);
